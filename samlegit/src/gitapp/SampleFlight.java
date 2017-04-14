@@ -25,7 +25,7 @@ public class SampleFlight {
 public void openapp()
 {
 		driver=new FirefoxDriver();
-		driver.get("https://8947674sandbox.oway.com.mm/");
+		driver.get("https://8947674sandbox.com.mm/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
@@ -39,12 +39,6 @@ public void EnterSearchdetails()
 {
 	try {
 		
-		//click flight
-				//driver.findElement(By.xpath(".//*[@id='tab-2']/a/span")).click();
-				//click domestic
-				//driver.findElement(By.xpath(".//*[@id='flight']/div[1]/input[1]")).click();
-				//click one way
-				//driver.findElement(By.xpath(".//*[@id='lo-oneway']")).click();
 				
 				//From,To Mouse actions
 				Actions action =new Actions(driver);

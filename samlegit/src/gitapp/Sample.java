@@ -21,15 +21,6 @@ public class Sample {
 	public void testSearchReturnsResults() {
 	    //Create instance of PhantomJS driver
 		 {
-				/*Capabilities caps = new DesiredCapabilities();
-				((DesiredCapabilities) caps).setJavascriptEnabled(true);                
-		        ((DesiredCapabilities) caps).setCapability("takesScreenshot", false);  
-		        ((DesiredCapabilities) caps).setCapability(
-		                PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-		                
-		                "D:/Leela/Seleniumjarfiles/phantomjs-2.1.1-windows/phantomjs-2.1.1-windows/bin/phantomjs.exe"
-		            );*/
-		        // WebDriver  driver = new  PhantomJSDriver(caps);
 			 DesiredCapabilities cap=new DesiredCapabilities();
 				cap.setBrowserName("Mozilla");
 		           driver = new  HtmlUnitDriver(cap);
@@ -37,10 +28,12 @@ public class Sample {
 			 
 	    //Navigate to the page
 	    driver.get("http://www.appneta.com/");
+	    System.out.println("Opened appneta site");
 	    driver.manage().window().setSize( new Dimension( 1124, 850 ) );
 	 
 	    //Click the Blog link
 	    driver.findElement(By.linkText("Blog")).click();
+	    System.out.println("Blog link clicked");
 	 
 	    //Input the search term into the search box
 	    String searchTerm = "Testing";
@@ -48,6 +41,7 @@ public class Sample {
 	 
 	    //Click the Search button
 	    driver.findElement(By.cssSelector("input[value='Search']")).click();
+	    System.out.println("Search button clicked");
 	 
 	    //Find the results
 	    List<WebElement> results = driver.findElements(By.cssSelector(".post"));

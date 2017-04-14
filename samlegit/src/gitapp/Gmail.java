@@ -35,14 +35,13 @@ public class Gmail {
 	{
 		driver =new FirefoxDriver();
 		driver.get("http://www.bing.com/");
+		System.out.println("Open bing site");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 	@Test
 	public void link() 
 	{
 		try {
-		
-		
 			List<WebElement>links=driver.findElements(By.tagName("a"));
 			for (int i = 0; i < links.size(); i++) {
 				System.out.println(links.size());
