@@ -49,11 +49,7 @@ public class GetLang {
 			//System.out.println(url);			
 				
 			}
-//			WebElement drop=driver.findElement(By.xpath(".//*[@id='lang-chooser']"));
-//			drop.click();
-//			List<WebElement>langlist=drop.findElements(By.tagName("option"));
-			
-			
+			System.out.println("hello");
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e);
